@@ -1,0 +1,89 @@
+=login_btn_hover
+    &:hover
+        background-color: $bg-color 
+        color: $first-color
+        transition: 0.6s
+
+=menu_hover
+    &::after
+        background-color: $first-color
+        display: block
+        content: ""
+        height: 3px
+        width: 0%
+        transition: width .3s ease-in-out
+    &:hover
+        color: $first-color
+    &:hover::after,&:focus::after
+        width: 100%
+
+=login_hover
+    &::after
+        background-color: $text-color
+        display: block
+        content: ""
+        height: 3px
+        width: 0%
+        transition: width .3s ease-in-out
+    &:hover
+        color: $text-color
+    &:hover::after,&:focus::after
+        width: 100%
+
+=switch
+    &::after
+        display: inline-block
+        content: ""
+        width: 84px
+        height: 40px
+        background-color: #ffddd8
+        border-radius: 20px
+        position: absolute
+        top: -5px
+        right: -40px
+    &::before
+        display: inline-block
+        content: ""
+        width: 28px
+        height: 28px
+        background-color: $first-color
+        border-radius: 50%
+        position: absolute
+        top: 1px
+        right: 10px
+        transition: .6s
+        z-index: 1
+
+=checked_and_before
+    &_switch:checked + &_switch_for::before
+        transform: translateX(43px)
+
+=checked_pricing_pos
+    #check:checked ~ &_pos &_block_1
+        background-color: #fff
+        color: #404040
+        .pricing
+            &_text
+                color: $first-color
+        .btn-1
+            background-color: $first-color
+            color: $white-color
+            &:hover
+                border: 1px solid $first-color
+                background-color: $white-color
+                color: $first-color
+                transition: .6s
+    #check:checked ~ &_pos &_block_2
+        background-color: $first-color
+        color: #fff
+        .clr-1
+            color: #fff
+        .clr-2
+            color: #fff
+        .btn-2
+            background-color: $white-color
+            color: $first-color
+            &:hover
+                border: 1px solid #fff
+                background-color: #ffddd8
+                transition: .6s
