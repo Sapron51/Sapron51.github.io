@@ -9,6 +9,10 @@ body
 
 *
     margin: 0
+    box-sizing: border-box
+    outline: none !important
+    /* чтобы не подсвечивало синим выбор на андроиде */
+    -webkit-tap-highlight-color: transparent
 
 /* Контейнер сайта */
 
@@ -22,7 +26,7 @@ body
 /* Шапка страницы */
 
 header, .tracking
-    background-color: #FFF8F2
+    background-color: $bg-color
 
 .navbar
     display: flex
@@ -157,13 +161,13 @@ header, .tracking
     font-style: normal
     font-weight: 600
     font-size: 48px
-    color: #18063C
+    color: $title-color
 .subtitle
     font-family: 'Inter'
     font-style: normal
     font-weight: 400
     font-size: 18px 
-    color: #404040 
+    color: $gray-color 
     opacity: 0.8
     padding-top: 20px
 
@@ -188,7 +192,7 @@ header, .tracking
         font-style: normal
         font-weight: 600
         font-size: 48px
-        color: #18063C
+        color: $title-color
         padding-right: 180px
         &:last-child
             padding-right: 0
@@ -197,7 +201,7 @@ header, .tracking
         font-style: normal
         font-weight: 400
         font-size: 18px
-        color: #404040
+        color: $gray-color
         opacity: 0.6
 
 /* Третья секция function */
@@ -256,13 +260,13 @@ header, .tracking
         font-style: normal
         font-weight: 600
         font-size: 28px
-        color: #fff
+        color: $white-color
     &_subtext
         font-family: 'Inter'
         font-style: normal
         font-weight: 400
         font-size: 18px
-        color: #fff
+        color: $white-color
         opacity: 0.8
     &_vector
         position: absolute
@@ -312,7 +316,7 @@ header, .tracking
         font-weight: 600
         font-size: 28px
         line-height: 36px
-        color: #404040
+        color: $gray-color
     &_subtext
         font-family: 'Inter'
         font-style: normal
@@ -320,7 +324,7 @@ header, .tracking
         font-size: 18px
         margin-top: 8px
         line-height: 36px
-        color: #404040
+        color: $gray-color
         opacity: 0.8
     .bg-1
         background: #FA855C
@@ -356,7 +360,7 @@ header, .tracking
             left: -157px
         &_bg
             margin-top: 240px
-            background: #FFF8F2
+            background: $bg-color
             position: absolute
             width: 39%
             height: 616px
@@ -406,7 +410,7 @@ header, .tracking
         margin-left: 165px
     &_descr
         width: 300px
-        color: #404040
+        color: $gray-color
     &_text
         font-family: 'Poppins'
         font-style: normal
@@ -576,7 +580,7 @@ header, .tracking
     .clr-1
         color: $first-color
     .clr-2
-        color: #404040
+        color: $gray-color
     &_hand  
         width: 336px
         height: 336px
