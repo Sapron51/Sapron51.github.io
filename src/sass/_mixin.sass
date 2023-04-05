@@ -1,8 +1,13 @@
+
+/* Кнопка Sign Up в меню nav */
+
 =login_btn_hover
     &:hover
         background-color: $bg-color 
         color: $first-color
         transition: 0.6s
+
+/* Появления слева на право полосы для меню */
 
 =menu_hover
     &::after
@@ -17,6 +22,8 @@
     &:hover::after,&:focus::after
         width: 100%
 
+/* Появления слева на право полосы для Login около кнопки Sign Up */
+
 =login_hover
     &::after
         background-color: $text-color
@@ -29,6 +36,8 @@
         color: $text-color
     &:hover::after,&:focus::after
         width: 100%
+
+/* Переключатель в секции pricing */
 
 =switch
     &::after
@@ -54,9 +63,13 @@
         transition: .6s
         z-index: 1
 
+/* Преключатель, который стремится впарво по нажатию */
+
 =checked_and_before
     &_switch:checked + &_switch_for::before
         transform: translateX(43px)
+
+/* Изменение цветов внутри двух карточек в pricing */
 
 =checked_pricing_pos
     #check:checked ~ &_pos &_block_1
@@ -87,3 +100,11 @@
                 border: 1px solid #fff
                 background-color: #ffddd8
                 transition: .6s
+
+/* Кнопка в секции partners */
+
+=partners_hover
+    &:hover
+        background-color: $first-color
+        color: $white-color
+        transition: .6s
