@@ -86,14 +86,18 @@ header, .tracking
     min-height: 992px
     overflow: hidden
     &_title
+        max-width: 800px
         position: inherit
         font-family: 'Poppins'
         font-style: normal
         font-weight: 700
         font-size: 64px
         text-align: center
-        padding: 220px 185px 0 185px
+        padding-top: 220px
+        margin: 0 auto
     &_subtitle
+        max-width: 595px
+        margin: 0 auto
         font-family: 'Inter'
         font-style: normal
         font-weight: 400
@@ -104,8 +108,7 @@ header, .tracking
         display: block
         width: 240px
         height: 76px
-        margin: 0 auto
-        margin-top: 68px
+        margin: 68px auto 382px auto
         border: 1px solid $first-color
         border-radius: 40px
         background-color: $first-color
@@ -170,6 +173,7 @@ header, .tracking
     color: $gray-color 
     opacity: 0.8
     padding-top: 20px
+    line-height: 36px
 
 /* Вторая секция с плавным переходом vector */
 
@@ -218,29 +222,33 @@ header, .tracking
         position: inherit
         padding-top: 209px
         text-align: center
+        .title
+            max-width: 785px
+            margin: 0 auto
+        .subtitle
+            max-width: 700px
+            margin: 0 auto
+        &_share
+            position: absolute
+            top: 240px
+            left: 581px
+            z-index: -1
     &_block
         display: flex
         justify-content: space-between
-        margin-top: 64px
+        margin: 64px 0
         list-style: none
-    &_item_1
+    &_item
         width: 369px
-        height: 258px
+        height: auto
+        border-radius: 48px
+        box-shadow: 14px 20px 48px rgba(25, 15, 44, 0.06)
+    .bg-7
         background: #70D0DC
-        border-radius: 48px
-        box-shadow: 14px 20px 48px rgba(25, 15, 44, 0.06)
-    &_item_2
-        width: 369px
-        height: 258px
+    .bg-8
         background: #7562E0
-        border-radius: 48px
-        box-shadow: 14px 20px 48px rgba(25, 15, 44, 0.06)
-    &_item_3
-        width: 369px
-        height: 258px
+    .bg-9
         background: #FA865F
-        border-radius: 48px
-        box-shadow: 14px 20px 48px rgba(25, 15, 44, 0.06)
     &_round
         display: flex
         justify-content: center
@@ -252,9 +260,10 @@ header, .tracking
         border-radius: 24px
         margin: 28px 0 0 28px
     &_descr
-        width: 305px
-        padding: 24px 0 0 30px
+        width: 100%
+        padding: 25px
         list-style: none
+        margin: 0
     &_text
         font-family: 'Poppins'
         font-style: normal
@@ -272,10 +281,6 @@ header, .tracking
         position: absolute
         top: 88px
         left: -210px
-    &_share
-        position: absolute
-        top: 240px
-        left: 581px
 
 /* Четвертая секция analytics */
 
@@ -290,16 +295,18 @@ header, .tracking
         padding-top: 188px
     &_heading
         position: relative
-    &_share
-        position: absolute
-        top:227px
-        left: 900px
+        &_share
+            position: absolute
+            top: 40px
+            left: 250px
+            z-index: -1
     &_block
         display: flex
-        align-items: center
         margin-top: 48px
         padding: 0
         list-style: none
+        &:last-child
+            margin-bottom: 189px
     &_round
         display: flex
         justify-content: center
@@ -317,6 +324,7 @@ header, .tracking
         font-size: 28px
         line-height: 36px
         color: $gray-color
+        max-width: 365px
     &_subtext
         font-family: 'Inter'
         font-style: normal
@@ -326,6 +334,7 @@ header, .tracking
         line-height: 36px
         color: $gray-color
         opacity: 0.8
+        max-width: 300px
     .bg-1
         background: #FA855C
     .bg-2
@@ -373,6 +382,7 @@ header, .tracking
     background-color: rgba(243, 253, 254, 0.6)
     position: relative
     overflow: hidden
+    z-index: -2
     &_board
         position: absolute
         width: 383px
@@ -386,12 +396,23 @@ header, .tracking
         right: -156px 
         transform: rotate(12deg)
     &_heading
-        position: inherit
+        position: relative
         padding-top: 140px
+        &_share
+            position: absolute
+            top: 175px
+            left: 219px
+            z-index: -1
+        .title
+            max-width: 710px
+        .subtitle
+            max-width: 700px
     &_block
         display: flex
         align-items: center
         margin-top: 64px
+        &:last-child
+            margin-bottom: 156px
     &_round
         display: flex
         justify-content: center
@@ -409,7 +430,7 @@ header, .tracking
     .center_side
         margin-left: 165px
     &_descr
-        width: 300px
+        max-width: 300px
         color: $gray-color
     &_text
         font-family: 'Poppins'
@@ -448,9 +469,6 @@ header, .tracking
         &_vector_2
             top: 418px
             left: 500px
-        &_share
-            top: 175px
-            left: 219px
 
 /* Шестая секция pricing */
 
@@ -463,14 +481,19 @@ header, .tracking
         .title
             position: relative
             line-height: 70px
+            max-width: 700px
+            margin: 0 auto
         .subtitle
             line-height: 36px
+            max-width: 700px
+            margin: 0 auto
         &_share
             width: 176px
             height: 35px
             position: absolute
-            top: 175px
-            right: 285px
+            top: 35px
+            right: 15px
+            z-index: -1
     &_item
         text-align: center
     &_switch
@@ -497,7 +520,7 @@ header, .tracking
     &_pos
         display: flex
         justify-content: center
-        padding-top: 64px
+        padding: 64px 0 160px 0
     &_block_1, &_block_2
         position: relative
         width: 468px
