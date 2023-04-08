@@ -23,6 +23,33 @@ body
     margin: 0 auto 
     padding: 0 15px
 
+/* Настройки своих стилей для Swiper */
+
+.swiper
+    display: block
+    margin: 0 auto
+    max-width: 1000px
+    width: 100%
+    height: auto
+    /* border: 1px solid $first-color */
+    margin-top: 60px 
+
+.swiper-wrapper
+    box-sizing: content-box
+
+.swiper-slide
+    display: flex
+
+.swiper-pagination-bullet
+    position: relative   
+    width: 12px
+    height: 12px
+    background: $first-color
+    &-active 
+        width: 33px
+        border-radius: 7px
+        transition: width .3s ease-in-out
+
 /* Шапка страницы */
 
 header, .tracking
@@ -727,11 +754,20 @@ header, .tracking
         padding-top: 173px
         text-align: center
         .title
+            position: relative
             max-width: 700px
             margin: 0 auto
         .subtitle
             max-width: 700px
             margin: 0 auto
+        &_vector
+            position: absolute
+            width: 176px
+            height: 35px
+            top: 209px
+            left: 568px
+    &_pos
+        padding-top: 65px
     &_text
         font-family: 'Inter'
         font-style: normal
@@ -758,19 +794,62 @@ header, .tracking
         line-height: 26px
         color: $gray-color
         opacity: .7
-        padding-top: 16px
+        padding: 16px 0 35px 0
     &_round 
+        display: flex
         width: 298px
         height: 379px
         border-radius: 370px
         background: #FFF8F2
         margin-right: 48px
-    &_feedback
-        display: flex
-        align-items: center
+    .r-1
+        justify-content: flex-end
+    .r-2    
         justify-content: center
-        padding-top: 60px
+    .r-4
+        justify-content: center
+    &_photo
+        width: 250px
+        height: 300px
+        margin-top: 15px
+    &_img
+        img
+            position: absolute
+        &_like
+            width: 220px
+            height: 225px
+            top: 38px
+            left: 56px
+        &_vector
+            width: 147px
+            height: 131px
+            top: 203px
+            left: 196px
+            &_2
+                width: 94px
+                height: 110px
+                top: 710px
+                right: 103px
+                opacity: .5
+        &_chat
+            width: 196px
+            height: 200px
+            top: 562px
+            left: 220px
+        &_emoji
+            width: 126px
+            height: 123px
+            top: 648px
+            right: 140px
 
+/* Девятая секция get */
 
+.get
+    min-height: 676px
+    background-color: $bg-color
+    position: relative
+    &_heading
+        padding-top: 250px
+        max-width: 530px
 
 
