@@ -108,3 +108,45 @@
         background-color: $first-color
         color: $white-color
         transition: .6s
+
+/* Наведение на социальные сети */
+
+=get_instagram
+    &:hover
+        background: url('../icon/footer/instagram_hover.svg')
+        background-position: center center
+        background-repeat: no-repeat
+        transition: .6s
+=get_linkedin 
+    &:hover
+        background: url('../icon/footer/linkedin_hover.svg')
+        background-position: center center
+        background-repeat: no-repeat
+        transition: .6s
+=get_facebook 
+    &:hover
+        background: url('../icon/footer/facebook_hover.svg')
+        background-position: center center
+        background-repeat: no-repeat
+        transition: .6s
+=get_twitter 
+    &:hover
+        background: url('../icon/footer/twitter_hover.svg')
+        background-position: center center
+        background-repeat: no-repeat
+        transition: .6s
+
+/* Наведение на последние элементы footer */
+
+=footer_politic 
+    &::after
+        background-color: $first-color
+        display: block
+        content: ""
+        height: 3px
+        width: 0%
+        transition: width .3s ease-in-out
+    &:hover
+        color: $first-color
+    &:hover::after,&:focus::after
+        width: 100%

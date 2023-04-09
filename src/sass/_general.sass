@@ -6,6 +6,8 @@ body
     ul
         list-style: none
         padding: 0
+    a
+        text-decoration: none
 
 *
     margin: 0
@@ -848,8 +850,166 @@ header, .tracking
     min-height: 676px
     background-color: $bg-color
     position: relative
+    overflow: hidden
+    img
+        position: absolute
+    &_hand
+        &_1
+            width: 400px
+            height: 156px
+            transform: rotate(29.46deg)
+            top: 76px
+            left: -57px
+        &_2
+            width: 632px
+            height: 218px
+            top: 290px
+            right: -210px
     &_heading
         padding-top: 250px
         max-width: 530px
+        &_share
+            width: 176px
+            height: 35px
+            top: 290px
+            left: 241px
+        .title
+            position: relative
+    &_two_btn
+        display: flex
+        padding: 48px 0
+    &_btn
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 178px
+        height: 71px
+        background-color: $first-color
+        border-radius: 40px
+        border: 1px solid $first-color
+        cursor: pointer
+        &_1
+            margin-right: 20px
+            background-color: $first-color
+            transition: .6s
+            &:hover
+                background-color: $bg-color
+                transition: .6s
+        &_2
+            background-color: $bg-color
+            transition: .6s
+            &:hover
+                background-color: $first-color
+                transition: .6s
+        &_app
+            display: block
+            width: 178px
+            height: 71px
+            background: url('../img/get/app_store.svg')
+            background-position: center center
+            background-repeat: no-repeat
+            transition: .6s
+            &:hover
+                background: url('../img/get/app_store_1.svg') 
+                background-position: center center
+                background-repeat: no-repeat
+                transition: .6s
+        &_google
+            display: block
+            width: 178px
+            height: 71px
+            background: url('../img/get/google_play.svg')
+            background-position: center center
+            background-repeat: no-repeat
+            transition: .6s
+            &:hover
+                background: url('../img/get/google_play_1.svg') 
+                background-position: center center
+                background-repeat: no-repeat
+                transition: .6s
+    &_mobile
+        position: absolute
+        width: 405px
+        height: 816px
+        top: 100px
+        right: 124px
 
+/* Подвал сайта footer */
+
+footer
+    min-height: 341px
+.footer
+    &_navbar
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding-top: 129px
+        &_logo
+            width: 134px
+            height: 30px
+    &_underline
+        max-width: 100%
+        border: 1px solid $gray-color
+        opacity: .2
+        margin-top: 61px
+    &_politic
+        display: flex
+        justify-content: space-between
+        padding-top: 40px
+        a
+            transition: .4s
+            @include footer_politic
+
+    &_condition_politic
+        display: flex
+    &_text
+        font-family: 'Inter'
+        font-style: normal
+        font-weight: 400
+        font-size: 18px
+        line-height: 24px
+    &_condition
+        display: block
+        padding-right: 108px
+        color: $gray-color
+    &_privacy
+        color: $gray-color
+    &_reserved
+        padding-right: 24px
+        &_all
+            color: $gray-color
+.social
+    display: flex
+    &_link
+        display: block
+        width: 20px
+        height: 20px
+    &_item
+        padding-right: 40px
+        &:last-child
+            padding-right: 0
+    .inst
+        background: url('../icon/footer/instagram.svg')
+        background-position: center center
+        background-repeat: no-repeat
+        transition: .6s
+        @include get_instagram
+    .in
+        background: url('../icon/footer/linkedin.svg')
+        background-position: center center
+        background-repeat: no-repeat
+        transition: .6s
+        @include get_linkedin
+    .face
+        background: url('../icon/footer/facebook.svg') 
+        background-position: center center
+        background-repeat: no-repeat
+        transition: .6s
+        @include get_facebook
+    .twit
+        background: url('../icon/footer/twitter.svg')
+        background-position: center center
+        background-repeat: no-repeat
+        transition: .6s
+        @include get_twitter
 
