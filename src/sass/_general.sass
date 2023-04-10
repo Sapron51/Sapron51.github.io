@@ -183,6 +183,8 @@ header, .tracking
         top: 687px
         left: 286px
     &_share
+        width: 176px
+        height: 35px
         top: 372px
         left: 225px
 
@@ -259,6 +261,8 @@ header, .tracking
             margin: 0 auto
         &_share
             position: absolute
+            width: 176px
+            height: 35px
             top: 240px
             left: 581px
             z-index: -1
@@ -379,21 +383,37 @@ header, .tracking
             height: 816px
             left: -47px
         &_kit
+            width: 181px
+            height: 205px
             top: 70px
             left: 255px
+            transform: rotate(16deg)
         &_kit_1
+            width: 151px
+            height: 179px
             top: 319px
-            left: -169px
+            left: -125px
+            box-shadow: 0px 64px 64px -20px rgba(0, 0, 0, 0.1)
         &_kit_2
+            width: 350px
+            height: 228px
             top: 469px
-            left: 93px
+            left: 140px
+            box-shadow: 0px 64px 64px -20px rgba(0, 0, 0, 0.1)
         &_kit_3
+            width: 384px
+            height: 91px
             top: 790px
-            left: -5px
+            left: 45px
+            box-shadow: 0px 64px 64px -20px rgba(0, 0, 0, 0.1)
         &_vector
+            width: 146px
+            height: 131px
             top: 710px
             left: 435px
         &_vector_2
+            width: 87px
+            height: 122px
             top: 115px
             left: -157px
         &_bg
@@ -472,27 +492,36 @@ header, .tracking
         img
             position: absolute
         &_kit
-            width: 376px
-            height: 379px
-            top: 285px  
-            right: 130px
+            width: 267px
+            height: 270px
+            top: 295px  
+            right: 166px
+            filter: drop-shadow(0px 32px 54px rgba(65, 74, 85, 0.05))
         &_kit_2
-            width: 340px
-            height: 430px
-            top: 580px
-            right: 130px
+            width: 230px
+            height: 321px
+            top: 592px
+            right: 166px
+            filter: drop-shadow(0px 32px 54px rgba(65, 74, 85, 0.05))
         &_kit_3
-            width: 497px
-            height: 554px
-            top: 380px
-            right: -300px
+            width: 388px
+            height: 444px
+            top: 382px
+            right: -248px
+            filter: drop-shadow(0px 32px 54px rgba(65, 74, 85, 0.05))
         &_vector_1
+            width: 89px
+            height: 124px
             top: 667px
             left: -43px
         &_vector_2
+            width: 89px
+            height: 124px
             top: 418px
             left: 500px
         &_share
+            width: 176px
+            height: 35px
             top: 175px
             left: 219px
 
@@ -659,10 +688,8 @@ header, .tracking
     &_heading
         padding-top: 248px
         position: relative
-        .title
-            max-width: 525px
+        max-width: 525px
         .subtitle
-            max-width: 471px
             padding-top: 24px
     &_btn
         width: 182px
@@ -719,22 +746,22 @@ header, .tracking
             border-radius: 48px
             top: 619px
             left: -180px
-    &_img
-        &_1
-            width: 48px
-            height: 48px
-        &_2
-            width: 72px
-            height: 72px
-        &_3
-            width: 87px
-            height: 87px
-        &_4
-            width: 114px
-            height: 100px
-        &_5 
-            width: 48px
-            height: 48px
+        &_img
+            &_1
+                width: 48px
+                height: 48px
+            &_2
+                width: 72px
+                height: 72px
+            &_3
+                width: 87px
+                height: 87px
+            &_4
+                width: 114px
+                height: 100px
+            &_5 
+                width: 48px
+                height: 48px
     &_logo
         display: flex
         align-items: center
@@ -970,7 +997,7 @@ footer
         line-height: 24px
     &_condition
         display: block
-        padding-right: 108px
+        margin-right: 108px
         color: $gray-color
     &_privacy
         color: $gray-color
