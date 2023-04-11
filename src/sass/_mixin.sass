@@ -101,6 +101,19 @@
                 background-color: #ffddd8
                 transition: .6s
 
+=pricicng_btn_1 
+    &:hover
+        border: 1px solid $white-color
+        background-color: #ffddd8
+        transition: .6s
+
+=pricing_btn_2
+    &:hover
+        border: 1px solid $first-color
+        background-color: $white-color
+        color: $first-color
+        transition: .6s
+
 /* Кнопка в секции partners */
 
 =partners_hover
@@ -108,33 +121,36 @@
         background-color: $first-color
         color: $white-color
         transition: .6s
+        transform: scale(1.05)
 
-/* Наведение на социальные сети */
+/* Наведение на кнопку в секции get */
 
-=get_instagram
+=get_app
     &:hover
-        background: url('../icon/footer/instagram_hover.svg')
-        background-position: center center
-        background-repeat: no-repeat
+        background-color: $bg-color
         transition: .6s
-=get_linkedin 
+        transform: scale(1.05)
+    &:hover svg
+        fill: $first-color
+        transition: .6s
+
+=get_google
     &:hover
-        background: url('../icon/footer/linkedin_hover.svg')
-        background-position: center center
-        background-repeat: no-repeat
+        background-color: $first-color
         transition: .6s
-=get_facebook 
+        transform: scale(1.05)
+    &:hover svg
+        fill: $white-color
+        transition: .6s
+
+/* Наведение на социальные сети в footer */
+
+=footer_social
     &:hover
-        background: url('../icon/footer/facebook_hover.svg')
-        background-position: center center
-        background-repeat: no-repeat
-        transition: .6s
-=get_twitter 
-    &:hover
-        background: url('../icon/footer/twitter_hover.svg')
-        background-position: center center
-        background-repeat: no-repeat
-        transition: .6s
+        fill: $first-color
+        transition: .4s
+        transform: scale(1.1)
+
 
 /* Наведение на последние элементы footer */
 

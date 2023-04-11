@@ -643,18 +643,11 @@ header, .tracking
     .btn-1
         background-color: $white-color
         color: $first-color
-        &:hover
-            border: 1px solid $white-color
-            background-color: #ffddd8
-            transition: .6s
+        @include pricicng_btn_1 
     .btn-2
         background-color: $first-color
         color: $white-color
-        &:hover
-            border: 1px solid $first-color
-            background-color: $white-color
-            color: $first-color
-            transition: .6s
+        @include pricing_btn_2
     .clr-1
         color: $first-color
     .clr-2
@@ -906,6 +899,7 @@ header, .tracking
         display: flex
         padding: 48px 0
     &_btn
+        position: relative
         display: flex
         justify-content: center
         align-items: center
@@ -919,41 +913,27 @@ header, .tracking
             margin-right: 20px
             background-color: $first-color
             transition: .6s
-            &:hover
-                background-color: $bg-color
+            text-align: center
+            svg
+                position: absolute
+                top: 50%
+                left: 50%
+                transform: translate(-50%,-50%)
+                display: inline-block
                 transition: .6s
+            @include get_app
         &_2
             background-color: $bg-color
             transition: .6s
-            &:hover
-                background-color: $first-color
+            text-align: center
+            svg
+                position: absolute
+                top: 50%
+                left: 50%
+                transform: translate(-50%,-50%)
+                display: inline-block
                 transition: .6s
-        &_app
-            display: block
-            width: 178px
-            height: 71px
-            background: url('../img/get/app_store.svg')
-            background-position: center center
-            background-repeat: no-repeat
-            transition: .6s
-            &:hover
-                background: url('../img/get/app_store_1.svg') 
-                background-position: center center
-                background-repeat: no-repeat
-                transition: .6s
-        &_google
-            display: block
-            width: 178px
-            height: 71px
-            background: url('../img/get/google_play.svg')
-            background-position: center center
-            background-repeat: no-repeat
-            transition: .6s
-            &:hover
-                background: url('../img/get/google_play_1.svg') 
-                background-position: center center
-                background-repeat: no-repeat
-                transition: .6s
+            @include get_google
     &_mobile
         position: absolute
         width: 405px
@@ -1011,31 +991,20 @@ footer
         display: block
         width: 20px
         height: 20px
+        text-align: center
     &_item
         padding-right: 40px
         &:last-child
             padding-right: 0
-    .inst
-        background: url('../icon/footer/instagram.svg')
-        background-position: center center
-        background-repeat: no-repeat
-        transition: .6s
-        @include get_instagram
-    .in
-        background: url('../icon/footer/linkedin.svg')
-        background-position: center center
-        background-repeat: no-repeat
-        transition: .6s
-        @include get_linkedin
-    .face
-        background: url('../icon/footer/facebook.svg') 
-        background-position: center center
-        background-repeat: no-repeat
-        transition: .6s
-        @include get_facebook
-    .twit
-        background: url('../icon/footer/twitter.svg')
-        background-position: center center
-        background-repeat: no-repeat
-        transition: .6s
-        @include get_twitter
+    &_instagram
+        transition: .4s
+        @include footer_social
+    &_linkedin
+        transition: .4s
+        @include footer_social
+    &_facebook
+        transition: .4s
+        @include footer_social
+    &_twitter
+        transition: .4s
+        @include footer_social
